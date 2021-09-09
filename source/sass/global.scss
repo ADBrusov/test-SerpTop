@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-width: $min-width;
+  max-width: 1920px;
+  height: 100%;
+  margin: 0 auto;
+
+  font-family: "Cera Pro", "Arial", sans-serif;
+
+  background-color: $white;
+}
+
+.page-main {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  flex: 0 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+  top: 0;
+  left: 0;
+}

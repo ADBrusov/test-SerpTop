@@ -55,8 +55,10 @@ if (sliderLine && nextSlideButton && prevSlideButton && totalSlidesSpan && slide
 const navButtonSwitcher = document.querySelector('.header__bottom-nav-button');
 const navList = document.querySelector('.header__bottom-nav-list');
 
-navButtonSwitcher.addEventListener('click', function () {
-  navList.getAttribute('class').includes('header__bottom-nav-list--active')
-    ? navList.setAttribute('class', 'header__bottom-nav-list')
-    : navList.setAttribute('class', 'header__bottom-nav-list header__bottom-nav-list--active');
-})
+if (navButtonSwitcher && navList) {
+  navButtonSwitcher.addEventListener('click', function () {
+    navList.getAttribute('class').includes('header__bottom-nav-list--active')
+      ? navList.setAttribute('class', 'header__bottom-nav-list')
+      : navList.setAttribute('class', 'header__bottom-nav-list header__bottom-nav-list--active');
+  })
+}

@@ -11,7 +11,6 @@ if (sliderLine && nextSlideButton && prevSlideButton && totalSlidesSpan && slide
   let activeSlideNumber = 1;
   let offset = 0;
 
-
   const setTotalSlides = () => {
     totalSlidesSpan.innerHTML = '/' + TOTAL_SLIDES;
   }
@@ -50,3 +49,14 @@ if (sliderLine && nextSlideButton && prevSlideButton && totalSlidesSpan && slide
 
   setTotalSlides();
 }
+
+
+
+const navButtonSwitcher = document.querySelector('.header__bottom-nav-button');
+const navList = document.querySelector('.header__bottom-nav-list');
+
+navButtonSwitcher.addEventListener('click', function () {
+  navList.getAttribute('class').includes('header__bottom-nav-list--active')
+    ? navList.setAttribute('class', 'header__bottom-nav-list')
+    : navList.setAttribute('class', 'header__bottom-nav-list header__bottom-nav-list--active');
+})
